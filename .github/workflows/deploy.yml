@@ -49,6 +49,7 @@ jobs:
 # S3에 업로드함
       - name: Upload to S3
         run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://$S3_BUCKET_NAME/$GITHUB_SHA.zip
+
 # Codedploy를 사용해서 s3에 올라와있는 파일을 가져다 배포까지
       - name: Code Deploy To Ec2 instance
         run: aws deploy create-deployment 

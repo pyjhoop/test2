@@ -33,7 +33,7 @@ jobs:
 
 #BUil 결과를 압축시키는 잡 파일명이 중복되지 않게 해준다.
       - name: Make zip file
-        run: zip -r ./$GITHYB_SHA.zip .
+        run: zip -qq -r ./$GITHUB_SHA.zip .
         shell: bash
 
 # AWS에 접속하고 AWS 서비스를 사용하기 위한 권한 등
